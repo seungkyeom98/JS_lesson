@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="#">
+        <table width="400px">
+            <!-- step1 시작! -->
+            <tr>
+                <th colspan="2" bgcolor="gray" align="left" height="50px">Step1. 아이디/비번 입력</th>
+            </tr>
+            <tr height="35px">
+                <td bgcolor="whitesmoke"  align="right">아이디</td>
+                <td bgcolor="whitesmoke">
+                    <input type="text" name="id">
+                </td>
+            </tr>
+            <tr height="35px">
+                
+                <td bgcolor="whitesmoke" align="right">비밀번호</td>
+                <td bgcolor="whitesmoke">
+                    <input type="password" name="pw">
+                </td>
+            </tr>
+            <tr height="35px">
+                <td bgcolor="whitesmoke" align="right">비밀번호 확인</td>
+                <td bgcolor="whitesmoke">
+                    <input type="password" name="pw_check">
+                </td>
+            </tr>
+            <!-- step1 끝! -->
+
+            <!-- step2 시작! -->
+            <tr>
+                <th colspan="2" bgcolor="gray" align="left" height="50px">Step2. 개인정보</th>
+            </tr>
+            <tr height="35px">
+                <td bgcolor="whitesmoke" align="right">성별</td>
+                <td bgcolor="whitesmoke">
+                    <span>남</span><input type="radio" name="gender" value="man"> <span>여</span><input type="radio"
+                        name="gender" value="woman">
+                </td>
+            </tr>
+            <tr height="35px">
+                <td bgcolor="whitesmoke" align="right">혈액형</td>
+                <td bgcolor="whitesmoke">
+                    <select name="blood">
+                        <option value="">혈액형</option>
+                        <option value="A">A형</option>
+                        <option value="B">B형</option>
+                        <option value="O">O형</option>
+                        <option value="AB">AB형</option>
+                        <!-- blood=B 이렇게 백엔드 서버에 날아간다. -->
+                    </select>
+                </td>
+            </tr>
+            <tr height="35px">
+                <td bgcolor="whitesmoke" align="right">생일</td>
+                <td bgcolor="whitesmoke">
+                    <input type="date" name="birthday">
+                </td>
+            </tr>
+            <!-- step2 끝! -->
+             
+            <!-- step3 시작! -->
+            <tr>
+                <th colspan="2" bgcolor="gray" align="left" height="50px">Step3. 선호도</th>
+
+            </tr>
+            <tr height="35px">
+                <td bgcolor="whitesmoke" align="right">취미</td>
+                <td bgcolor="whitesmoke">
+                    <span>축구</span><input type="checkbox" name="hobby" value="soccer">
+                    <span>야구</span><input type="checkbox" name="hobby" value="baseball">
+                    <span>농구</span><input type="checkbox" name="hobby" value="basketball">
+                </td>
+            </tr>
+            <!-- step3 끝! -->
+             
+            <!-- step4 시작! -->
+            <tr>
+                <th colspan="2" bgcolor="gray" align="left" height="50px">Step4. 하고 싶은 말</th>
+
+            </tr>
+
+            <tr>
+                <td bgcolor="whitesmoke" colspan="2">
+                    <textarea cols="53" rows="10"></textarea>
+                </td>
+            </tr>
+            <!-- step4 끝! -->
+             
+            <!-- 제출! -->            
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="제출">
+
+                </td>
+            </tr>
+
+            <!-- 입력값 초기화! -->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset">
+                </td>
+            </tr>
+
+        </table>
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+

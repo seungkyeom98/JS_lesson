@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+    form 태그
+    - 사용자에게 입력값을 받아서, 전달할 수 있는 태그
+    - 필수 속성: action(입력값을 어디로 보낼지)
+    - 선택 속성: method(입력값을 어떻게 보낼지)
+               - GET방식/POST방식 (기본값 GET)
+               - #: 아직은 어디로 보낼지 모르겠다. 의미.
+    -->
+    <form action="#">
+        <!-- input 태그: 사용자가 데이터를 입력할 수 있는 태그 -->
+        <!-- placeholder속성: 미리보기텍스트 -->
+        <!-- maxlength 속성: 글자 수 제한 지정 -->
+        <span>ID </span> <input type="text" placeholder="a123" maxlength="10" name="id">
+        <span>PW</span> <input type="password" name="pw">
+
+        <!-- checkbox타입: 사용자에게 '여러개를 선택'할 수 있게 함 -->
+        밥<input type="checkbox" name="food" value="rice">
+        면<input type="checkbox" name="food" value="noodle">
+        빵<input type="checkbox" name="food" value="bread">
+
+        <!-- radio타입: 사용자에게 '하나만 선택'할 수 있게 함 -->
+        남<input type="radio" name="gender" value="man">
+        여<input type="radio" name="gender" value="woman">
+
+        <!-- select 태그: 목록상자 생성 -->
+        <!-- option 태그: select안쪽에 실질적 선택지 -->
+        <select name="blood">
+            <option value="">혈액형</option>
+            <option value="A">A형</option>
+            <option value="B">B형</option>
+            <option value="O">O형</option>
+            <option value="AB">AB형</option>
+            <!-- blood=B 이렇게 백엔드 서버에 날아간다. -->
+        </select>
+
+
+
+        <!-- 제출 버튼! 눌렀을 때, 본인이 속해있는 form태그의 정보를 전송 -->
+        <input type="submit">
+        <!-- 입력값 초기화 버튼 -->
+        <input type="reset">
+
+
+    </form>
+
+
+
+</body>
+
+</html>
