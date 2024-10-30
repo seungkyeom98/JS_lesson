@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+
+        let subjects = [];
+        let score = [];
+        let sum =0;
+        let average = 0;
+
+        // 1. 사용자에게 과목 수를 입력받는다
+        let num = parseInt(prompt("과목 수를 입력해주세요"));
+
+        // 2. 사용자에게 과목 이름을 입력받는다
+        //    = 사용자가 준 과목 수만큼 입력작업 반복
+        //   ** 사용자가 입력해준 과목명은 배열에 넣어서 관리
+        for(let i =0; i<num;i++){
+            subjects.push(prompt("점수를 입력할 과목명을 입력해주세요>>"));
+        }
+        console.log(subjects);
+
+        // 3. 사용자에게 각 과목의 점수를 입력받는다
+        //    ex. 자바-파이썬-디비
+        //        -> 배열에 담아서
+        //        자바 점수 입력~ -> 파이썬 점수 입력 -> ...
+        //   ** 사용자가 입력해준 점수도 새 배열에 넣어서 관리
+        for(let i =0; i<num;i++){
+            score.push(parseInt(prompt(`${subjects[i]}의 점수 입력>>`)));
+        }
+        console.log(score);
+        
+        // 웹페이지에 출력
+        // - 반복문을 활용해서 배열에 담긴 정보를 웹에 출력
+        // - document.write()
+        // - 배열의 길이를 반환해주는 데이터
+        //   배열이름.length
+        document.write('<table border="1px solid black">');
+
+        //과목반복
+        document.write("<tr>");
+        for(let i =0; i<num;i++){
+            document.write(`<td>${subjects[i]}</td>`);
+        }
+        document.write("<td>총합</td>");
+        document.write("<td>평균</td>");
+        document.write("</tr>");
+
+        //점수 반복
+        document.write("<tr>");
+        for(let i =0; i<num;i++){
+            document.write("<td>"+score[i]+"</td>");
+        }
+        //총합
+        for(let i =0; i<num;i++){
+            sum+=score[i];
+        }
+        //평균
+        average = sum/num;
+        document.write(`<td>${sum}</td>`);
+        document.write(`<td>${average}</td>`);
+        document.write("</tr>");
+        document.write("</table>");
+ 
+
+
+
+
+
+            
+    </script>
+
+
+
+</body>
+</html>

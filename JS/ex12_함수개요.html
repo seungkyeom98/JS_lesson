@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 함수 : 특정 목적의 작업을 수행하기 위해서 독립적으로 설계된 블록
+        // - 함수를 정의할 때는 input(입력, 매개변수), output(출력, 반환데이터)을 고려해야 함!
+        // - 모든 함수는 return 가능!!
+        // - 함수의 매개변수에는 데이터 타입을 지정해주지 않아도 됨!
+
+        // 함수선언방식 : 함수선언문, 함수표현식, 화살표함수
+
+        // 1. 함수선언문
+        // - 함수선언문으로 함수를 정의한 후에 함수 호출을 할 때는
+        //   어디에서든지 호출할 수 있다
+        hello();
+        // ★함수호이스팅★ : 함수선언문이 자바스크립트 엔진(컴파일러)에 의해서 제일 먼저 실행되는 방식
+        //                   원치 않는 실행결과가 나올 수 있기 때문에
+        //                   최근 트렌드는 함수표현식, 화살표함수를 채택하고 있음
+
+        // 1-1. 선언
+        function hello(){
+            console.log("안녕~");
+            
+        }
+        // 1-2. 호출
+        hello();
+        hello();
+
+        // 2. 함수표현식(ES6)
+        // -  함수를 값으로 취급
+        // -  다른 함수의 인자값으로 전달 가능
+
+        // 2-1. 선언
+        let hello2 = function(){
+            console.log("잘가~");
+            
+        }
+
+        // 2-2. 호출
+        hello2();
+
+        // 3. 화살표함수(ES6)
+        // 3-1. 선언 (기본형태)
+        let hello4 = () =>{
+            console.log("바이바이~");
+            
+        }
+
+        // + 매개변수가 하나인 경우에는 소괄호 생략 가능
+        let hello5 = a =>{
+            console.log(`매개변수 ${a}`);
+            
+        }
+
+        // + 로직이 한 줄인 경우, 중괄호 생략 가능
+        let hello6 = () => console.log(`2`);
+        
+        // 호출
+        hello4();
+        hello5();
+        hello6();
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

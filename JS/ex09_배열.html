@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 배열 : 여러 데이터를 하나의 공간에 저장하고 관리할 수 있는 자료형
+        // - 길이가 가변적
+        // - 자료형 제한X
+
+        // 배열 선언
+        // Java : 자료형[] 배열명 = new 자료형 [공간크기];
+        // JS : let 배열명 = [];
+
+        let array1 = []; //빈 배열 생성
+        let array2 = [1,2,"승겸"] //3개의 데이터를 가진 배열 생성
+
+        // 배열에 데이터 추가
+        array1[0] = 1;
+        array1[1] = "hello";
+        array1[2] = true;
+        array1[3] = [1,2];
+        array1[4] = {"name" : "miri"};
+
+        // push()
+        // - 배열의 마지막 위치에 데이터를 추가하는 함수
+        // - 데이터를 추가할 때 1개 이상 추가 가능
+        array1.push(1);
+        array1.push(100);
+        array1.push(1,2,3,4,5);
+        
+        // pop()
+        // - 배열의 마지막 위치에 데이터를 삭제하는 함수
+        array1.pop();
+
+        // 배열 데이터 수정 - 인덱스 활용
+        // ex) 3번방 데이터를 1로 바꾸고 싶어!
+        array1[3] = 1;
+
+        // 배열 데이터 삭제 - splice() 스플라이스
+        // splice(시작인덱스, 삭제할개수)
+        // ex. 0번째 방 데이터부터 2개 삭제하겠다! (0,1번방 삭제)
+        array1.splice(0,2);
+        // + 제거 후 대체 가능
+        array1.splice(3,3,"대체");
+
+        console.log(array1);
+        
+        // includes()
+        // - 배열 안에 특정 데이터가 있는지 확인
+        // - 있으면 true, 없으면 false 리턴
+        console.log(array1.includes(100));
+        
+        // indexOf()
+        // - 데이터가 있다면 그 데이터의 인덱스 변환
+        // - 데이터가 없다면 -1 반환
+        console.log(array1.indexOf(100));
+        
+        // slice()
+        // - 기존 배열에서 원하는 부분만 떼서 새로운 배열로 복제
+        // - 기존 배열에는 영향X
+        // - slice(시작인덱스, 끝나는인덱스+1)
+        // ex. array1에서 0번방부터 5번방 인덱스를 복제
+        let newArray = array1.slice(0,6);
+        console.log(newArray);
+        
+
+    </script>
+
+
+
+
+</body>
+</html>

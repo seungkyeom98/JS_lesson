@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 문자열 --> 숫자 변환
+        let str = "10.1";
+        let newStr = Number(str);
+        let newStr2 = parseInt(str); //파스Int 라고 읽는다.
+        let newStr3 = parseFloat(str); //파스플로트 라고 읽는다. 소수점쓸때
+        console.log(str);
+        console.log(newStr);
+        console.log(newStr2);
+        console.log(newStr3);
+        
+        // 숫자로 변환할 수 없는 걸 변환하면
+        // NaN(=Not a Number)로 출력
+        // --> 이럴 경우에는 데이터를 다시 체크해야 한다!
+        let str2 = "반가워요~";
+        let newStr4 = Number(str2);
+        console.log(newStr4);
+        
+        // 숫자 --> 문자열로 변환
+        let num = 10;
+        let newNum = String(num);
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

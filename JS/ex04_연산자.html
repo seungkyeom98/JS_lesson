@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 연산자
+        // Java의 나누기 연산자 : /(몫-정수), %(나머지)
+        // JS의 나누기 연산자 : /(나누기-실수), %(나머지)
+        console.log(7/2);
+        console.log(7%2);
+        console.log(Math.floor(7/2)); // 소수점을 버리는 메소드
+
+        // 비교연산자
+        // 동등연산자(==, !=), 일치연산자(===, !==)
+        // 동등연산자 : 숫자데이터와 문자데이터를 비교할때, 자동형변환
+        // 일치연산자 : 자동형변환X ---> 데이터와 타입을 같이 비교
+
+        // [예제] 백의 자리 이하를 버리기
+        let num =312;
+        // - num의 100자리 이하를 버려서 300으로 만들기
+        let num1 = Math.floor(num/100)*100;
+        console.log("백의 자리 이하 버린 결과 : "+num1);
+        
+    </script>
+
+
+</body>
+</html>

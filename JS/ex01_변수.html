@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 변수 : 데이터를 담을 수 있는 공간
+        // 변수선언 방법
+        // 자바) 자료형 변수이름;
+        // JS) 변수키워드 변수이름;
+        
+        //자바스크립트 변수의 특징
+        // - 변수키워드로 선언
+        // - 초기화하는 순간에 자료형이 결정됨
+        // - 초기화(=할당)하지 않으면, undefined 타입(=자료형)이 된다.
+
+        // 자료형
+        // - string, number, boolean, undefined, null
+        // - 위 5가지를 제외한 타입은 object(=객체)
+
+        let str1 = "미리";
+        let str2 = '미리'; //큰따옴표, 작은따옴표 모두 사용가능
+        let num1 = 3;
+        let num2 = 3.14;
+        let bool = true;
+
+        // 1. string : 문자형태 자료형
+        // 큰따옴표(""), 작은따옴표(''), 백틱(``) 전부 사용 가능
+        console.log("이름은"+str1);
+        console.log(` 이름은 ${str1}`);
+        console.log();
+        
+
+        // 2. number : 숫자 타입
+        console.log(num1);
+
+        // * 자료형을 구별하는 방법
+        // a. console창의 색깔
+        // b. typeof( 자료형을 확인하고 싶은 데이터)
+        console.log( typeof(num2));
+        console.log( typeof(str2));
+        
+        // 3. boolean : 참/거짓
+        let check = false;
+
+        // null과 undefined의 공통된 의미
+        // - 값이 비어있다 라는 의미
+        
+        // 다른 의미
+        // - null : 비어있다!
+        // - undefined : 타입도 정의되지 않은 상태
+        //               개발자들이 값이 비어있는걸 비교하는
+        //               용도로 활용
+
+        let empty = null; // null 타입
+        let data; // undefined 타입
+        
+        // 한번에 여러 데이터를 출력할 때
+        // - +(더하기) 연산으로 출력
+        console.log(str1+ str2 +num1);
+        // -,(쉼표)로 구분해서 출력
+        console.log(str1, str2, num1); //1띄어쓰기 된다.
+        //2num1이 문자 자료형으로 바뀌지 않고, 숫자 자료형 그대로이다.
+        
+        
+         
+    </script>
+
+
+</body>
+</html>
