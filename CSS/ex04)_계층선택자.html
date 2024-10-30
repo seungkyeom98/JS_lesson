@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 계층선택자 */
+        /* (1) 자손선택자
+            기호 : 띄어쓰기 */
+        /* (1-0) div의 자손인 모든 요소의 색을 blue */
+         div *{
+            color: blue;
+         }
+        /* (1-1) div의 자손인 li의 색을 red로 바꿔본다 */
+        div li {
+            color: red;
+        }
+        /* (1-2) div의 자손 중에서 aa 클래스의 색을 pink로 바꾼다 */
+        div .aa{
+            color: pink;
+        }
+
+        /* (2) 자식선택자 */
+        /* 기호: >  */
+        /* (2-1) ol의 자식중에 span태그만 색을 green으로 바꾼다 */
+        ol>span {
+            color: green;
+        }
+
+        /* (3) 근접후행 선택자(=인정형제 선택자) */
+        /*   내 바로 아래 동생
+               기호 : +  */
+        /* (3-1) span태그 바로 아래 동생인 li의 색을 회색으로 바꾼다 */
+        span+li {
+            color: gray;
+        }
+
+        /* (4) 후행 선택자(일반형제 선택자)*/
+        /*     내 모든 동생
+               기호 : ~  */
+        /* (4-1) li태그의 동생인 li의 색을 brown */
+        li ~ li {
+            color: brown;
+        }
+
+        /* 심화! */
+        /* 1. a라는 클래스를 가진 요소 중, li태그에 해당하는 것만 설정 */
+        li.a {
+            background-color: yellow;
+        }
+
+        /* 2. 한 요소는 여러 개의 클래스를 가질 수 있음 */
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1 id="c">좋아하는 음식</h1>
+    <ul>
+        <li class="a">김밥</li>
+        <li class="b">순대</li>
+        <li class="a">치킨</li>
+    </ul>
+
+    <div>
+        <strong>나만의 간장계란밥 레시피</strong>
+        <ol>
+            <li class="aa">계란을 안 뒤집고 굽는다</li>
+            <li>밥에 간장이랑 참기름을 넣는다</li>
+            <span>(짜게 만들어지지 않도록 주의할 것)</span>
+            <li>계란을 넣고 깨를 왕창뿌린다</li>
+        </ol>
+    </div>
+
+    <li class="aa">계란을 안 뒤집고 굽는다</li>
+    <li>밥에 간장이랑 참기름을 넣는다</li>
+    <span>(짜게 만들어지지 않도록 주의할 것)</span>
+    <li>계란을 넣고 깨를 왕창뿌린다</li>
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 선택자의 종류 */
+        /* (1) 전체선택자 (*)
+           - html 문서의 모든 요소를 선택 */
+        *{
+            color: blue;
+        }
+
+        
+        /* (2) 태그선택자 (태그이름) */
+        li {
+            color: pink;
+        }
+
+        /*  각각을 구분해서 지정해주고 싶을 때 
+            -> 클래스, 아이디 선택자 사용  */
+        
+        /* (3) 클래스 선택자 (.클래스이름) */
+        .a {
+            background-color: yellow;
+        }
+
+        .b {
+            background-color: gray;
+        }
+
+        /* (4) 아이디 선택자 (#아이디이름) */
+        #c {
+            background-color: aqua;
+        }
+    
+
+        /* ★선택자 명시도★ */
+        /* 
+            전체선택자      *           0
+            태그선택자      태그명      1
+            클래스선택자    .클래스명   10
+            아이디선택자    #아이디명   100
+        */
+
+        /* 템플릿 등을 쓰다가 아무리 해도 바꿀 수 없는게 있다면.. */
+        /* 스타일 속성 값 적는 곳 옆에 !important */
+
+    </style>
+
+
+</head>
+<body>
+    
+    <h1 id="c">좋아하는 음식</h1>
+    <ul>
+        <li class="a">빵</li>
+        <li class="b">쌀국수</li>
+        <li class="a">푸딩</li>
+    </ul>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

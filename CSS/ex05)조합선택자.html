@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 조합선택자 */
+        /* (1) 그룹선택자
+            - 여러 가지 선택자들을 한번에 묶을 수 있다 */
+        h2, p{
+            color: pink;
+        }
+        /* (2) 반응선택자 */
+        /* (2-1) 대상:hover 
+            - 대상에 마우스를 올렸을 때*/
+        h1:hover {
+            color: blue;
+        }
+        /* (2-2) 대상:active 
+            - 대상을 클릭할 때*/
+        h2:active{
+            color: red;
+        }
+        /* 태그선택자뿐만 아니라, 전체와 클래스와 아이디에도 적용할 수 있다  */
+
+    </style>
+
+
+</head>
+<body>
+    <h1>좋아하는 카페메뉴</h1>
+    <h2 class="cafe">스타벅스</h1>
+    <p>자몽허니블랙티</p>
+</body>
+</html>
