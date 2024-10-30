@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 사용자에게 숫자 두 개를 입력받아서
+        // 숫자의 합을 출력하는 addNumber()
+
+        let num1 = Number(prompt("1번째 숫자를 입력해주세요"));
+        let num2 = Number(prompt("2번째 숫자를 입력해주세요"));
+        console.log(num1);
+        console.log(num2);
+        
+
+        // 함수구현하기
+        // - 함수선언문, 함수표현식, 화살표함수 세가지 다 해보기!
+        // - 숫자의 합은 alert()로 띄워주기
+
+        // - 함수선언문
+        function addNumber(n1, n2){
+            return n1+n2;  
+        }
+        let result = addNumber(num1,num2);
+        alert(`두 수의 합은 ${result}이다`);
+
+        // - 함수표현식
+        let addNumber2 = function(n1, n2){
+            alert(`합: ${n1+n2}`);
+        }
+        addNumber2(num1, num2);
+
+        // - 화살표함수
+        let addNumber3 =(n1,n2) => {
+            alert(`합: ${n1+n2}`);
+        }
+        addNumber3(num1, num2);
+        
+    </script>
+
+
+</body>
+</html>
