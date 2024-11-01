@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+
+            color: pink;
+        }
+
+        .pp {
+            background-color: yellow;
+        }
+
+        .cc {
+            font-family: "궁서체";
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <p class="pp">변경대상</p>
+    <button>클릭!</button>
+    <div></div>
+
+
+<script src="../jquery-3.7.1.min.js"></script>
+
+<script src="../jquery-ui-1.14.1/jquery-ui-1.14.1/jquery-ui.js">
+    //애니메이션용 j쿼리
+</script> 
+
+
+<script>
+
+       // addClass() : 요소에 클래스를 추가하는 메소드
+       $("p").addClass("cc");
+        // removeClass : 요소에 매개변수에 해당하는 클래스만 지우는 메소드
+        $("p").removeClass("pp");
+
+        // 요소에 이벤트를 추가하는 방법
+        // - .on(이벤트종류, 함수)
+        $("p").on("mouseover", function(){
+            $(this).html("마우스를..올리셨네요~") // this는 객체 자기 참조.
+        })
+        
+        // p태그에서 마우스를 떼면
+        // 내용이 마우스를 떼셨네요.. 로 바뀌게 만들기!
+        $("p").on("mouseout", function(){
+            $(this).html("마우스를..떼셨네요~")
+        })
+
+
+
+
+$("button").on("click", function () {
+            // p태그가 서서히 빨간색으로 변하게 하는 애니메이션 효과
+            $("p").animate({
+                'color': 'red'
+            }, 1000, function () {
+                $(".cc").animate({
+                    'font-size': '50px'
+                }, 1000, function(){
+                     $("div").animate({
+                        'width': '50px',
+                        'height': '50px',
+                        'backgroundColor': 'yellow'
+                    }, 1000, "easeInOutQuint")
+                })
+            })
+        })
+
+</script>
+
+
+</body>
+</html>
