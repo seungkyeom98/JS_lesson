@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> 한시간 있으면 밥먹어요!</h1>
+
+    <ul>
+        <li>아침에 산책하는데</li>
+        <li>투썸에..</li>
+        <li id="choco">스초생이 돌아왔어요...나이스</li>
+    </ul>
+
+
+
+
+    <!-- 제이쿼리 로드하기 -->
+    <!-- 1. 직접 다운로드 받아서 로드 (상대경로)-->
+    <script src="../jquery-3.7.1.min.js"></script>
+    <!-- ./는 해당폴더, ../는 그 위에 폴더 선택이다!  -->
+
+    <!-- 2. CDN(content Delivery Network)링크 바로 가져옴 (절대경로)-->
+    <!-- integrity, crossorigin은 보안 옵션이니 수정하지 말 것! -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+
+    <script> //로드하는 j쿼리 코드를 위에 적어야 j쿼리 문법인 $문법을 쓸 수 있다!
+        // 기본문법
+        // $(요소선택자).함수()
+
+        // 요소 내용 변경
+        $("h1").html("내용변경");
+
+        // 요소 스타일 수정
+        $("h1").css("color", "green");
+
+        // 다중 스타일 제어
+        $("h1").css({
+            "backgroundColor" : "pink",
+            "font-family" : "궁서체",
+            "font-size" : "100px"
+        });
+
+        // 메소드 체인
+        $("li").css("color","red").css("background-color","pink").html("변경");
+        $("#choco").html("재변경");        
+        // css에서 배운대로 id선택자는 #이 붙고, class선택자는 .이 class이름에 붙어야한다~
+
+    </script>
+
+
+
+
+</body>
+
+</html>
