@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>출력</button>
+    <div></div>
+
+    <!-- <table border="1px solid black">
+        <tr>
+            <td>순위</td>
+            <td>영화명</td>
+            <td>개봉일</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>명탐정코난</td>
+            <td>1990...</td>
+        </tr>
+    </table> -->
+
+
+
+
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+        let btn = document.getElementsByTagName("button")[0];
+        let div = document.getElementsByTagName("div")[0];
+
+
+        let getList = function () {//2
+
+            // 요청 url //3
+            let movieUrl = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=06ba645b86594a7c80cc349e4a910bdd&targetDt=20230101"
+
+            // 박스오피스 데이터를 받아와서 웹페이지에 출력하는 함수
+            let render = function (movieList) {  //5
+                console.log(movieList[0].rank);
+
+
+
+                let resultHTML = `   <table border="1px solid black">
+                    <tr>
+                        <td>순위</td>
+                        <td>영화명</td>
+                        <td>개봉일</td>
+                    </tr>
+                    `
+                for (let i = 0; i < movieList.length; i++) {
+
+                    resultHTML += `
+                            <tr>
+                                <td>${movieList[i].rank}</td>
+                                <td>${movieList[i].movieNm}</td>
+                                <td>${movieList[i].openDt}</td>
+                            </tr>
+                            `
+                }
+                resultHTML += `</table>`
+                div.innerHTML = resultHTML; //6
+            }
+
+
+
+            $.ajax({ //3
+                url: movieUrl,
+                success: function (result) {
+                    console.log("요청 성공!");
+                    // console.log(result);
+                    // console.log(result.boxOfficeResult);
+                    // console.log(result.boxOfficeResult.dailyBoxOfficeList);
+                    // console.log(result.boxOfficeResult.dailyBoxOfficeList[0]);
+                    // console.log(result.boxOfficeResult.dailyBoxOfficeList[0].movieNm);
+
+                    // 일별 박스오피스 1~10위 데이터를 변수에 저장
+                    let mList = result.boxOfficeResult.dailyBoxOfficeList;
+
+                    // 영화순위(rank), 영화명(movieNm), 개봉일(openDt)을 웹페이지에 출력
+                    render(mList); //4
+
+                }, // 파이썬 딕셔너리 형태인 key: value를 JS에선 객체(=object)로 생각한당
+                error: function () {
+                    console.log("요청 실패ㅠ");
+
+                }
+            })
+        }
+
+
+        btn.addEventListener("click", getList);//1
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+        // ajax
+        // - 비동기적인 웹페이지를 구현하기 위한 기술
+
+        // 특징
+        // - 서버 처리를 기다리지 않고도 비동기 요청이 가능
+        // - 페이지가 새로고침되지 않고도 데이터 요청/처리가 가능
+        // - 과도한 요청이 서버에 부하가 생길 수 있다.
+
+        // jQuery에서 지원하는 ajax구현방법
+        $.ajax({
+            url : "요청할 서버 경로",
+            type : "GET or POST",
+            data : "서버에 보낼 데이터",
+            dataType : "응답데이터 형식(html, xml, json, ...)",
+            success : function(data){
+                console.log("요청이 성공적으로 이루어졌을 경우");
+                
+            },
+            error : function(){
+                console.log("요청이 원활하게 이루어지지 않았을 경우");
+                
+            }
+
+        })
+     
+
+        // 영화진흥위원회 API 사용
+        // API(application programming interface)
+        // - 사용자와 프로그램이 소통할 수 있는 하나의 규칙
+
+        // API는 기능/데이터로 나뉨
+        // 장점 : 시간과 비용이 많이 드는 기능을 직접 구현하지 않아도 되고,
+        //        정리된 데이터(or기능)를 편리하게 받아볼 수 있음
+        // 단점 : 무료API의 경우, 무료 할당량이 초과되면 요금을 부여하게 하기 위해, 사용자에게 인증키를 발급받도록 하고 있음
+
+        // - 공공데이터포털, 네이버 개발자센터, 카카오 개발자센터, google developers, Meta developers 등등..
+
+
+
+    </script>
+
+</body>
+</html>
