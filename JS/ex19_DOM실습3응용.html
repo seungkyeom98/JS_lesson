@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>좋아요</h1>
+    <p id="num">0</p>
+    <button id="plus" onclick="calculate('p')">증가</button> 
+    <button id="minus" onclick="calculate('m')">감소</button>
+<!-- html요소(태그+content)가 먼저 실행되고, 매개변수를 보낸다. -->
+
+    <script>
+        // 1. addEventListner안에 로직을 적지 말고, "함수로 따로 분리"
+        // 2. 함수는 딱 하나만 존재해야 함
+        // 3. plus, minus 버튼에 인라인 스타일로 함수를 정의
+
+
+
+
+
+        let plus = document.getElementById("plus");
+        let minus = document.getElementById("minus");
+        let num = document.getElementById("num");
+
+        let sum1 = Number(num.textContent);
+
+        let calculate = (a) => {
+
+            if (a==='p') {
+                sum1 += 1;
+                // num.textContent = sum1;
+            } else  { // else if (a==='m') 안해도 어차피 매개변수 p아니면 m만 들어와서, else라고해도 된다.
+                if (sum1 > 0) {
+                    sum1 -= 1;
+                    // num.textContent = sum1;  //중복이라 아래로 뻄
+                }
+            }
+            num.textContent = sum1;
+        }
+
+
+
+        // plus.addEventListener("click", function () {
+        //     // 1. 증가 버튼을 클릭하면,
+        //     // 2. p태그 값을 가져와서 +1 작업 후에 다시 p태그에 넣기
+        //     sum1 += 1;
+        //     num.textContent = sum1;
+
+        // })
+
+        // minus.addEventListener("click", function () {
+        //     // 3. 감소 버튼을 클릭하면,
+        //     // 4. p태그 값을 가져와서 -1 작업 후에 다시 p태그에 넣기
+
+        //     if (sum1 <= 0) {
+
+        //     } else {
+        //         sum1 -= 1;
+        //         num.textContent = sum1;
+        //     }
+
+        // })
+
+
+    </script>
+
+
+</body>
+
+</html>

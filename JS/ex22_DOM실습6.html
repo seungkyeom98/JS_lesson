@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;  /*!important;*/
+        }
+        /* !important로 넣으면, 명시도 10000이라서, html의 인라인 스타일(-> 명시도 1000)을 이긴다. */
+    </style>
+
+
+</head>
+<body>
+    <!-- 스타일 실습! -->
+
+    <h1 id="hh">날씨가 흐려요~</h1>
+
+    <div id="area"></div>
+
+
+    <button id="btn">스타일변경</button>
+
+
+
+    <script>
+
+        let hh = document.getElementById("hh");
+        let btn = document.getElementById("btn");// null 오류 뜨면, 이름 잘 못 넣었는지 확인해보자
+        let area = document.getElementById("area");
+        let div = document.getElementsByTagName("div")[0];
+
+        // 버튼을 클릭했을때, h1태그의 스타일 변경
+        btn.addEventListener("click", ()=>{
+            // 1. 요소의 전체 스타일 조회
+            console.log(hh.style);
+
+            // 2. 내가 원하는 디자인으로 수정
+            hh.style.color = "blue";
+            // hh의 배경색을 노랑
+            hh.style.backgroundColor = "yellow";
+
+            // div가 동그랗게 되어야 하고,
+            // 배경색 초록색
+            area.style.borderRadius = "50%";
+            area.style.backgroundColor ="green"; // 카멜식으로 CSS가 속성이름이 바뀐다
+            // HTML의 인라인 스타일로 명시되어, CSS스타일보다 명시도가 높다
+
+            
+        })//화살표함수 모양
+
+    </script>
+
+
+</body>
+</html>

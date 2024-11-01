@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1T"> 즐거운 DOM 실습 </h1>
+
+    <button id="change">h1태그 변경</button>
+    <button id="aT">a태그 생성</button>
+    <button id="ulT">ul태그 생성</button>
+
+    <div id="area">
+        <!-- <ul>
+            <li>밥</li>
+            <li>빵</li>
+            <li>면</li>
+        </ul> -->
+
+
+    </div>
+
+    <script>
+        let change = document.getElementById("change"); // 함수, 태그의 객체화 (버튼)
+        let aT = document.getElementById("aT");         
+        let ulT = document.getElementById("ulT");
+        
+
+        let h1T = document.getElementById("h1T");       // 출력, 태그의 객체화
+        let area = document.getElementById("area");
+
+
+        change.addEventListener("click", function () {
+            // 1. h1태그변경 버튼 누르면
+            //    즐거운 DOM실습이 어려운 DOM실습으로 바뀌게 하기!
+            h1T.innerHTML = "어려운 DOM실습";
+        })
+
+        aT.addEventListener("click", function () {
+            // 2. a태그 생성 누르면
+            //    area에 네이버로 가는 a태그 생성(내용: 네이버로 이동)
+            area.innerHTML += '<a href="https://www.naver.com">네이버로 이동</a><br>';
+        })
+
+        ulT.addEventListener("click", function () {
+            // 3. ul태그 생성 누르면
+            //    area에 좋아하는 음식 3가지를 담은 ul태그를 만들어주세요
+            // ** 버튼을 많이 누르면 요소들이 계속 누적되면서 추가되게끔
+            area.innerHTML += `<ul>
+                <li>밥</li>
+                <li>빵</li>
+                <li>면</li>
+                </ul>`;         // 백틱``은 enter가 먹힌다. 홑따옴표나 쌍따옴표는 안된다.
+        })
+
+
+    </script>
+
+</body>
+
+</html>

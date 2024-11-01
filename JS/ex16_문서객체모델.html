@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id = "title">문서 객체 모델 배우기! </h1>
+
+    <p id="pTag">
+        좋아하는 음식은 <span>스초생</span> 입니다
+    </p>
+    
+    <ul>
+        <li class="item">투썸</li>
+        <li class="item">스벅</li>
+        <li class="item">이디야</li>
+    </ul>
+
+    <script>
+        // 문서객체모델
+        // DOM(Document Object Model)
+        // - HTML 요소를 자바스크립트에서 사용할 수 있도록 객체로 변환
+        
+        // - HTML '태그를 가져오거나 적용'해야 할 때 : innerHTML 속성
+        // - 텍스트 내용만 가져오거나 적용해야 할 때 : textContent 속성
+
+
+        // 1. title이라는 id값을 가진 요소를 가져올게!
+        let tit = document.getElementById("title");
+        console.log(tit);
+        
+        // 2. tit의 내용(content)에만 '접근'해볼게!
+        console.log(tit.innerHTML);
+        
+        // 3. tit의 내용을 '바꿔'볼게!
+        tit.innerHTML = "변경완료";
+        
+        // 4(1). pTag라는 id값을 가진 요소를 가져올게!
+        let pp = document.getElementById("pTag");
+        console.log(pp);
+        
+        // 5(2). pp의 내용(content)에만 접근해볼게!
+        console.log(pp.innerHTML);
+        
+        // 6(3). pp의 내용 중에서 태그는 제외하고 가져와볼게!
+        console.log(pp.textContent);
+        
+        // 7(4). pp의 내용 변경
+        // pp.textContent = "좋아하는 음식은 <span>샤초생</span> 입니다";
+        pp.innerHTML = "좋아하는 음식은 <span>샤초생</span> 입니다 ";
+
+        // 첫번째 방법
+        // 8(1). item이라는 클래스 이름을 가진 요소들을 가져올게
+        let items = document.getElementsByClassName("item");
+        console.log(items);
+
+        // 9(2). items로 가져온 요소중에 첫번째 요소에만 접근할래 
+        console.log(items[0]);
+        
+        // 두번째 방법
+        // 10(3). item이라는 클래스 이름을 가진 요소 중에서 첫번째 요소만 저장할래
+        let one = document.getElementsByClassName("item")[0];
+
+        // 11(4). li라는 태그명을 가진 요소들을 가져올게
+        let lis = document.getElementsByTagName("li");
+        console.log(lis);
+        
+        // 12(5). pp의 기존 내용을 그대로 두고, 새로운 내용을 추가
+        pp.innerHTML += "<span>마지막시간~</span> 입니다~";
+
+
+
+
+    </script>
+</body>
+</html>

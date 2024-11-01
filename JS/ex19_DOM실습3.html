@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>좋아요</h1>
+    <p id="num">0</p>
+    <button id="plus">증가</button>
+    <button id="minus">감소</button>
+
+    <script>
+
+        let plus = document.getElementById("plus");
+        let minus = document.getElementById("minus");
+        let num = document.getElementById("num");
+
+        let sum1 = Number(num.textContent);
+        
+        plus.addEventListener("click", function () {
+            // 1. 증가 버튼을 클릭하면,
+            // 2. p태그 값을 가져와서 +1 작업 후에 다시 p태그에 넣기
+            sum1 +=1;
+            num.textContent =sum1;
+
+        })
+
+        minus.addEventListener("click", function () {
+            // 3. 감소 버튼을 클릭하면,
+            // 4. p태그 값을 가져와서 -1 작업 후에 다시 p태그에 넣기
+
+            if (sum1<=0){
+                
+            }else{
+                sum1 -=1;
+                num.textContent =sum1;
+            }
+
+        })
+        // 포인트: 연산이 되어야 함!!
+        // + 숫자가 0이하로 내려가지 않게 해주세요!
+        
+    </script>
+
+
+</body>
+
+</html>

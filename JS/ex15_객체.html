@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // 객체의 구조 - {key:value, key:value, ...}
+        // key : 객체의 property(속성)
+        // value : property에 대한 값, 기본자료형, 배열, 함수, 객체데이터
+        // - 객체의 데이터에 접근하는 법 : 객체이름.속성명
+
+        // 객체의 종류
+        // 1. 내장객체
+        // - JS엔진이 구동되는 시점에 바로 제공되는 객체
+        // - Math, Date, String, Array..
+        // - ex) Math.random()
+
+        let today = new Date();
+        console.log(today);
+
+        let t_year = today.getFullYear();// 연도
+        let t_month = today.getMonth();// 월 (0~11)
+        let t_date = today.getDate(); // 일
+        let t_day = today.getDay(); // 요일 (0~6)
+
+        if(t_day == 0){
+            t_day = "일요일";
+        }
+        // 오늘은 2024년 10월 30일 수요일 입니다
+        document.write(`오늘은 ${t_year}년 ${t_month}월 ${t_date}일 ${t_day}입니다`);
+
+        // 2. 브라우저 객체
+        // 2-1. BOM(Brower Object Model) : 브라우저 객체 모델
+        // 2-2. DOM(Document Object Model) : 문서 객체 모델 -> 얘가 제일 중요 ex16
+         
+        // 2-1. BOM 브라우저에서 제공하는 객체
+        // window.open("http://www.naver.com");
+        
+        console.log(location.href);
+        
+        // 페이지 이동 
+        // location.href ="http://127.0.0.1:5500/JS/ex00_%EC%9E%85%EC%B6%9C%EB%A0%A5" //ex00_입출력으로 주소 바꿈
+
+        // 3. 사용자 정의 객체
+        let person = {
+            "name" : "miri",
+            "age" : 20,
+            "hello" : function(){
+                console.log("안녕하세요");
+                
+            }
+        }
+
+        // person 객체의 내용을 출력
+        console.log(person.age);
+        person.hello();
+
+
+    </script>
+
+
+    
+</body>
+</html>

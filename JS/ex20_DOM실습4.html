@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ipt">
+    <button id="btn">입력</button>
+    <br>
+    <br>
+    <img id="image" src="https://lh3.googleusercontent.com/proxy/9Q8NR0ngnrrbGpBWe0A8M5Tm0ObVVyyYrkoedr9700cfZNXYsWzdm9QUjwEg029pj0L6MPr87hLYpInUPwrX8F5MH3jIFNykt9IIwiSzkivWjg5rCO617ItvxyadZ8StB5pIKL4ynAvjGmJe_hY5Zj0eWTwegrkgeiU" width="200px">
+
+    <script>
+        // input에 고양이를 적고 입력 버튼을 누르면
+        // 이미징의 src가 고양이의 src로 바뀌게,
+        // -> 고양이/강아지
+        
+        let img = document.getElementById("image");
+        let ipt = document.getElementById("ipt");
+        let btn = document.getElementById("btn");
+        // 이미지 요소의 src 값에 접근하는 방법
+        console.log(img.src);
+        btn.addEventListener("click",function() {
+            
+            if (ipt.value=="고양이"){ //value, src;
+                img.src = "https://src.hidoc.co.kr/image/lib/2022/5/4/1651651323632_0.jpg";
+            }else if(ipt.value=="강아지"){
+                img.src = "https://www.gklibrarykor.com/wp-content/uploads/2024/08/1_%EA%B0%95%EC%95%84%EC%A7%80%EC%9D%98-%EC%8B%A0%EC%B2%B4%EC%A0%81-%ED%8A%B9%EC%A7%95.jpg";
+            }else{
+                alert("강아지와 고양이중에 선택해주세요")
+            }
+
+        })
+ 
+
+
+
+    </script>
+
+</body>
+</html>
