@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 600px;
+            background-color: yellow;
+        
+        /* Container에 작성하는 속성 */
+
+        /* (1) flex 스위치 켜기 */
+        /*  내 안에 있는 요소들을 flex 형태로 배치하겠다 */
+        display: flex;
+
+        /* (2) flex-direction : 배치 방향 설정 */
+        /* (2-1) row(기본값)
+        - 메인축 : 가로
+        - 서브축 : 세로(수직)  */
+        
+        /* (2-2) column
+        - 메인축 : 세로
+        - 서브축 : 가로(수평)  */
+        /* flex-direction: column; */
+
+        /* (3) justify-content : 메인축 정렬 */
+        justify-content: center;
+
+        /* (4) align-items : 서브축 정렬 */
+        /* align-items: center; */
+
+        /* (5) flex-wrap : 줄넘김처리 */
+        /* 이걸로 반응형 웹페이지(=홈페이지)를 만들 수 있다 */
+        /* flex-wrap: wrap; */
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+
+
+
+            /* item에 작성해야 하는 스타일 속성 */
+            /* 이걸로 반응형 웹페이지(=홈페이지)를 만들 수 있다 */
+            flex-basis: 15%;
+        }
+
+        #center {
+            flex-basis: 70%;
+        }
+        /* css grid 이것도 flex와 함께 2차(핵심) 프로젝트 작품 웹페이지 만들때 쓰기 좋다. */
+        /* 2차 프로젝트에 쌓을 기술 스텍 1ajax활용한 api와 2크롤링 */
+        /* https://getbootstrap.kr/ */
+
+
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item" id="center"></div>
+        <div class="item"></div>
+    </div>
+
+
+
+</body>
+
+</html>
